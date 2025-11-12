@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas Seguras</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Senhas Seguras</h1>
+
+        <div class="output-container">
+            <input type="text" id="password-output" readonly placeholder="Sua senha aparecerá aqui">
+            <button id="copy-btn">Copiar</button>
+        </div>
+
+        <div class="config-container">
+            <label for="length">Comprimento da Senha:</label>
+            <input type="number" id="length" value="12" min="4" max="50">
+            
+            <div>
+                <input type="checkbox" id="uppercase" checked>
+                <label for="uppercase">Incluir Maiúsculas (A-Z)</label>
+            </div>
+            <div>
+                <input type="checkbox" id="lowercase" checked>
+                <label for="lowercase">Incluir Minúsculas (a-z)</label>
+            </div>
+            <div>
+                <input type="checkbox" id="numbers" checked>
+                <label for="numbers">Incluir Números (0-9)</label>
+            </div>
+            <div>
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Incluir Símbolos (!@#$)</label>
+            </div>
+            
+            <button id="generate-btn">Gerar Senha</button>
+        </div>
+        
+        <div id="strength-indicator"></div>
+
+    </div>
+    
+    <script src="javascript/script.js"></script>
+</body>
+</html>
