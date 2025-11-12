@@ -1,0 +1,134 @@
+/* RESET BÁSICO E FONTES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6; /* Fundo cinza claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px; /* Limite a largura para melhor visualização */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+/* CAMPO DE SAÍDA DA SENHA */
+.output-container {
+    display: flex;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden; /* Garante que o input e o botão fiquem na borda */
+}
+
+#password-output {
+    flex-grow: 1;
+    padding: 12px;
+    font-size: 1.1em;
+    border: none;
+    outline: none;
+    background-color: #f9f9f9;
+}
+
+#copy-btn {
+    padding: 12px 18px;
+    background-color: #007bff; /* Azul primário */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#copy-btn:hover {
+    background-color: #0056b3;
+}
+
+/* CONFIGURAÇÕES DE INPUTS */
+.config-container {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.config-container > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.config-container label {
+    margin-left: 10px;
+    font-size: 1em;
+    color: #555;
+    cursor: pointer;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+/* BOTÃO DE GERAÇÃO */
+#generate-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #28a745; /* Verde para ação */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#generate-btn:hover {
+    background-color: #1e7e34;
+}
+
+/* INDICADOR DE FORÇA (Melhoria) */
+#strength-indicator {
+    margin-top: 20px;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px;
+    /* Suaviza a transição de cor do JavaScript */
+    transition: background-color 0.5s ease, color 0.5s ease; 
+    color: #333 !important; /* Força a cor do texto para ser legível */
+}
+
+/* RESPONSIVIDADE BÁSICA */
+@media (max-width: 500px) {
+    .container {
+        margin: 20px;
+    }
+    .output-container {
+        flex-direction: column;
+    }
+    #copy-btn {
+        width: 100%;
+        border-radius: 0 0 8px 8px;
+    }
+}
